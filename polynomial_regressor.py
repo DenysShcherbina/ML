@@ -19,13 +19,14 @@ plt.style.use('bmh')
 plt.scatter(x, y)
 plt.show()
 
-# Дooking for the best params
+# Looking for the best params
 param_grid = {'polynomialfeatures__degree': np.arange(21), 'linearregression__fit_intercept': [True, False]}
 grid = GridSearchCV(PolynomialRegression(), param_grid, cv=7)
 grid.fit(x, y)
 model = grid.best_estimator_
 print(grid.best_params_)
 
+# Visualization results
 plt.scatter(x, y)
 plt.plot(x, model.predict(x), c='red')
 plt.show()
