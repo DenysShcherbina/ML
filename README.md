@@ -1,2 +1,2 @@
-# ML
-ML projects
+# AdaBoosting
+Using AdaBoosting for classification
